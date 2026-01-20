@@ -1,82 +1,119 @@
+/* RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Verdana, sans-serif;
+}
 
+/* BACKGROUND */
 body {
-background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-
-font-family: 'Verdana', sans-serif;
-margin: 0;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
 }
 
-
-.container {
-background: white;
-padding: 30px;
-border-radius: 15px;
-text-align: center;
-max-width: 400px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* TOP LOVE TEXT */
+.love-top {
+  text-align: center;
+  padding: 30px 10px 10px;
 }
 
-h1 {
-color: #ff4d6d;
+.love-top h1 {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #ff2f92;
+  margin: 0;
 }
 
-button {
-background-color: #ff4d6d;
-color: white;
-border: none;
-padding: 12px 20px;
-font-size: 16px;
-border-radius: 25px;
-cursor: pointer;
-margin-top: 15px;
+.love-top p {
+  color: #e60073;
+  margin-top: 8px;
 }
 
-button:hover {
-background-color: #e63950;
-}
-
-.hidden {
-display: none;
-}
-
-#secretMessage {
-margin-top: 20px;
-color: #ff4d6d;
-font-size: 18px;
-}
+/* CAROUSEL */
 .carousel-wrapper {
-overflow: hidden;
-width: 100%;
-background: #ffe4e1;
-padding: 30px 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .carousel-track {
-display: flex;
-width: max-content;
-animation: scroll 20s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
 .carousel-item-custom {
-flex: 0 0 auto;
-width: 250px;
-margin: 0 15px;
-border-radius: 12px;
-overflow: hidden;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 250px;
+  height: 180px;
+  margin: 0 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .carousel-item-custom img {
-width: 100%;
-display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Smooth infinite scroll */
+/* CENTER WRAP */
+.center-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* CARD */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.container h1 {
+  color: #ff4d6d;
+}
+
+/* BUTTON */
+button {
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #e63950;
+}
+
+.hidden {
+  display: none;
+}
+
+#secretMessage {
+  margin-top: 20px;
+  color: #ff4d6d;
+  font-size: 18px;
+}
+
+/* CANVAS */
+#pinkboard {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ANIMATION */
 @keyframes scroll {
-0% {
-transform: translateX(0);
-}
-100% {
-transform: translateX(-50%);
-}
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
