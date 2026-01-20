@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For You ❤️</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+  <!-- TOP LOVE TEXT -->
+  <section class="love-top">
+    <h1>I Love You</h1>
+    <p>More than words can ever say 💕</p>
+  </section>
+
+  <!-- CAROUSEL -->
   <div class="carousel-wrapper">
-  <div class="carousel-track">
+    <div class="carousel-track">
 
-    <div class="carousel-item-custom">
-      <img src="Love.jpeg" alt=" ❤️">
+      <div class="carousel-item-custom"><img src="Love.jpeg"></div>
+      <div class="carousel-item-custom"><img src="Love2.jpeg"></div>
+      <div class="carousel-item-custom"><img src="Love3.jpeg"></div>
+
+      <!-- duplicates for smooth loop -->
+      <div class="carousel-item-custom"><img src="Love.jpeg"></div>
+      <div class="carousel-item-custom"><img src="Love2.jpeg"></div>
+      <div class="carousel-item-custom"><img src="Love3.jpeg"></div>
+
     </div>
-
-    <div class="carousel-item-custom">
-      <img src="Love2.jpeg" alt="💕">
-    </div>
-
-    <div class="carousel-item-custom">
-      <img src="Love3.jpeg" alt="🌸">
-    </div>
-
-    
-    <div class="carousel-item-custom">
-      <img src="Love.jpeg">
-    </div>
-
-    <div class="carousel-item-custom">
-      <img src="Love2.jpeg">
-    </div>
-
-    <div class="carousel-item-custom">
-      <img src="Love3.jpeg">
-    </div>
-
-  </div>
-</div>
-
-
-  <div class="container">
-    <h1>Hi My Love ❤️</h1>
-    <p id="mainText">
-      I made this little website just for you.
-    </p>
-
-    <button id="loveButton">Click Me 💕</button>
-
-    <p id="secretMessage" class="hidden">
-      You make my world brighter every single day 🌸  
-      I love you more than words can say 💖
-    </p>
   </div>
 
+  <!-- CENTERED CONTENT -->
+  <div class="center-wrap">
+    <div class="container">
+      <h1>Hi My Love ❤️</h1>
+      <p>I made this little website just for you.</p>
+
+      <button id="loveButton">Click Me 💕</button>
+
+      <p id="secretMessage" class="hidden">
+        You make my world brighter every single day 🌸  
+        I love you more than words can say 💖
+      </p>
+    </div>
+  </div>
+
+  <!-- CANVAS -->
+  <canvas id="pinkboard"></canvas>
+
+  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
