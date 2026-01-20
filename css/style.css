@@ -1,81 +1,47 @@
 body {
-  margin: 0;
-  font-family: Verdana, sans-serif;
-  background: linear-gradient(to bottom, #ffd1dc, #fff0f5);
-}
-
-/* CANVAS */
-#pinkboard {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* HERO */
-.love-hero {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.love-hero h1 {
-  font-family: "Pacifico", cursive;
-  font-size: 3rem;
-  color: #ff2f92;
-  margin: 0;
-}
-
-/* CAROUSEL */
-.carousel-wrapper {
-  overflow: hidden;
-  background: #ffe4e1;
-  padding: 20px 0;
-}
-
-.carousel-track {
+  background: linear-gradient(to bottom, #ffb6c1, #ffe4e1);
+  font-family: 'Verdana', sans-serif;
   display: flex;
-  gap: 20px;
-  animation: scroll 20s linear infinite;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.carousel-item-custom {
-  min-width: 250px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.carousel-item-custom img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-/* MESSAGE BOX */
 .container {
   background: white;
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 25px;
+  padding: 30px;
   border-radius: 15px;
   text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* BUTTON */
+h1 {
+  color: #ff4d6d;
+}
+
 button {
-  background: #ff4d6d;
+  background-color: #ff4d6d;
   color: white;
   border: none;
   padding: 12px 20px;
+  font-size: 16px;
   border-radius: 25px;
   cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #e63950;
 }
 
 .hidden {
   display: none;
 }
 
-/* ANIMATION */
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+#secretMessage {
+  margin-top: 20px;
+  color: #ff4d6d;
+  font-size: 18px;
 }
