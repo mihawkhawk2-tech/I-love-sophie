@@ -1,8 +1,3 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-
 /* BODY */
 body {
   margin: 0;
@@ -14,35 +9,74 @@ body {
 #pinkboard {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   pointer-events: none;
 }
 
 /* HERO */
 .love-hero {
-  margin-top: 30px;
   text-align: center;
+  margin: 30px 0;
 }
 
 .love-hero h1 {
   font-family: "Pacifico", cursive;
-  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-size: 3rem;
   color: #ff2f92;
   margin: 0;
-}
-
-.love-hero p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #e60073;
 }
 
 /* CAROUSEL */
 .carousel-wrapper {
   overflow: hidden;
   background: #ffe4e1;
+  padding: 20px 0;
+}
 
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
 
+.carousel-item-custom {
+  min-width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
+.carousel-item-custom img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* MESSAGE BOX */
+.container {
+  background: white;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* BUTTON */
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
