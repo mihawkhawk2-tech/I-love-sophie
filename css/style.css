@@ -44,10 +44,12 @@ button:hover {
   font-size: 18px;
 }
 .carousel-wrapper {
-  overflow: hidden;
   width: 100%;
   background: #ffe4e1;
   padding: 30px 0;
+  margin: 20px 0 40px 0; 
+
+
 }
 
 .carousel-track {
