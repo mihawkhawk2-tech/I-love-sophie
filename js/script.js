@@ -1,3 +1,4 @@
+/* BUTTON LOGIC */
 const button = document.getElementById("loveButton");
 const message = document.getElementById("secretMessage");
 
@@ -5,12 +6,14 @@ button.addEventListener("click", function () {
   message.classList.toggle("hidden");
   button.textContent = "I Love You ❤️";
 });
+
+/* CANVAS SETUP */
 const canvas = document.getElementById("pinkboard");
 const ctx = canvas.getContext("2d");
 
 let hearts = [];
-let mouse = { x: null, y: null };
 
+/* RESIZE */
 function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -18,34 +21,40 @@ function resize() {
 resize();
 window.addEventListener("resize", resize);
 
-// heart shape
+/* DRAW HEART SHAPE */
 function drawHeart(x, y, size, opacity) {
   ctx.save();
+
   ctx.translate(x, y);
   ctx.scale(size, size);
+
   ctx.beginPath();
   ctx.moveTo(0, 0);
   ctx.bezierCurveTo(-1, -1, -2, 1, 0, 2);
   ctx.bezierCurveTo(2, 1, 1, -1, 0, 0);
   ctx.closePath();
-  ctx.fillStyle = `rgba(255, 47, 146, ${opacity})`;
+
+  ctx.fillStyle = `rgba(255, 30, 120, ${opacity})`;
+  ctx.shadowBlur = 12;
+  ctx.shadowColor = "#ff2f92";
+
   ctx.fill();
   ctx.restore();
 }
 
-// heart particle
+/* HEART PARTICLE */
 class Heart {
   constructor(x, y) {
     this.x = x;
     this.y = y;
     this.size = Math.random() * 8 + 6;
-    this.speedY = Math.random() * -1.5 - 0.5;
+    this.speedY = Math.random() * -1.2 - 0.5;
     this.opacity = 1;
   }
 
   update() {
     this.y += this.speedY;
-    this.opacity -= 0.01;
+    this.opacity -= 0.015;
   }
 
   draw() {
@@ -53,14 +62,14 @@ class Heart {
   }
 }
 
-// mouse interaction ❤️
+/* MOUSE HEARTS */
 window.addEventListener("mousemove", (e) => {
   for (let i = 0; i < 2; i++) {
     hearts.push(new Heart(e.clientX, e.clientY));
   }
 });
 
-// ambient hearts (soft background)
+/* AMBIENT FLOATING HEARTS */
 setInterval(() => {
   hearts.push(
     new Heart(
@@ -68,13 +77,19 @@ setInterval(() => {
       canvas.height + 20
     )
   );
-}, 300);
+}, 350);
 
-// animation loop
+/* ANIMATION LOOP */
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  // RESET canvas state every frame (IMPORTANT)
+  ctx.globalAlpha = 1;
+  ctx.shadowBlur = 0;
+  ctx.shadowColor = "transparent";
+
   hearts = hearts.filter(h => h.opacity > 0);
+
   hearts.forEach(h => {
     h.update();
     h.draw();
