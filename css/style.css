@@ -99,6 +99,26 @@ html, body {
   z-index: -1;
   pointer-events: none;
 }
+.love-hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.love-hero h1 {
+  font-family: "Pacifico", cursive;
+  font-size: clamp(3rem, 10vw, 6rem);
+  color: #ff2f92;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.love-hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #e60073;
+  opacity: 0.85;
+}
+
 
 
 
