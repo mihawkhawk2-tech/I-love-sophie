@@ -57,20 +57,18 @@ button:hover {
 }
 
 .carousel-item-custom {
-  flex: 0 0 auto;
   width: 250px;
-  margin: 0 15px;
+  height: 180px;       
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .carousel-item-custom img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;     
 }
 
-/* Smooth infinite scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0);
