@@ -6,11 +6,11 @@
 /* BODY */
 body {
   margin: 0;
-  font-family: 'Verdana', sans-serif;
+  font-family: Verdana, sans-serif;
   background: linear-gradient(to bottom, #ffd1dc, #fff0f5);
 }
 
-/* HEART CANVAS */
+/* CANVAS */
 #pinkboard {
   position: fixed;
   inset: 0;
@@ -20,7 +20,7 @@ body {
   pointer-events: none;
 }
 
-/* HERO LOVE TEXT */
+/* HERO */
 .love-hero {
   margin-top: 30px;
   text-align: center;
@@ -42,83 +42,7 @@ body {
 /* CAROUSEL */
 .carousel-wrapper {
   overflow: hidden;
-  width: 100%;
   background: #ffe4e1;
-  padding: 30px 0;
-  margin-top: 20px;
-}
-
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.carousel-item-custom {
-  width: 250px;
-  margin: 0 15px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.carousel-item-custom img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-/* MESSAGE CONTAINER */
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 400px;
-  margin: 40px auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.container h1 {
-  color: #ff4d6d;
-}
-
-/* BUTTON */
-button {
-  background-color: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-button:hover {
-  background-color: #e63950;
-}
-
-/* SECRET MESSAGE */
-.hidden {
-  display: none;
-}
-
-#secretMessage {
-  margin-top: 20px;
-  color: #ff4d6d;
-  font-size: 18px;
-}
-
-/* CAROUSEL ANIMATION */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 
 
