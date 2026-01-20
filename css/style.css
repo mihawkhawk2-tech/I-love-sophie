@@ -98,25 +98,31 @@ html, body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-.love-hero {
-  width: 100%;
+.love-top {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  padding: 60px 20px 40px;
+  z-index: 50;
+  width: 100%;
+  pointer-events: none;
 }
 
-.love-hero h1 {
+.love-top h1 {
   font-family: "Pacifico", cursive;
-  font-size: clamp(3.5rem, 12vw, 6.5rem);
+  font-size: clamp(3.5rem, 10vw, 6rem);
   color: #ff2f92;
   margin: 0;
 }
 
-.love-hero p {
-  margin-top: 12px;
+.love-top p {
+  margin-top: 10px;
   font-size: 18px;
   color: #e60073;
-  opacity: 0.85;
+  opacity: 0.9;
 }
+
 
 
 
