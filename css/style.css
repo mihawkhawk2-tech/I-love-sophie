@@ -45,3 +45,39 @@ button:hover {
   color: #ff4d6d;
   font-size: 18px;
 }
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background: #ffe4e1;
+  padding: 30px 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-item-custom {
+  flex: 0 0 auto;
+  width: 250px;
+  margin: 0 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-item-custom img {
+  width: 100%;
+  display: block;
+}
+
+/* Smooth infinite scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
