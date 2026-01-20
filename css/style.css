@@ -1,62 +1,62 @@
-body {
-  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
 
-  font-family: 'Verdana', sans-serif;
-  margin: 0;
+body {
+background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+
+font-family: 'Verdana', sans-serif;
+margin: 0;
 }
 
 
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 400px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+background: white;
+padding: 30px;
+border-radius: 15px;
+text-align: center;
+max-width: 400px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 h1 {
-  color: #ff4d6d;
+color: #ff4d6d;
 }
 
 button {
-  background-color: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 15px;
+background-color: #ff4d6d;
+color: white;
+border: none;
+padding: 12px 20px;
+font-size: 16px;
+border-radius: 25px;
+cursor: pointer;
+margin-top: 15px;
 }
 
 button:hover {
-  background-color: #e63950;
+background-color: #e63950;
 }
 
 .hidden {
-  display: none;
+display: none;
 }
 
 #secretMessage {
-  margin-top: 20px;
-  color: #ff4d6d;
-  font-size: 18px;
+margin-top: 20px;
+color: #ff4d6d;
+font-size: 18px;
 }
 .carousel-wrapper {
-  width: 100%;
-  background: #ffe4e1;
-  padding: 30px 0;
-  margin: 20px 0 40px 0; 
-
-
+overflow: hidden;
+width: 100%;
+background: #ffe4e1;
+padding: 30px 0;
 }
 
 .carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
+display: flex;
+width: max-content;
+animation: scroll 20s linear infinite;
 }
+
 .carousel-item-custom {
 flex: 0 0 auto;
 width: 250px;
@@ -65,18 +65,18 @@ border-radius: 12px;
 overflow: hidden;
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
 .carousel-item-custom img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+width: 100%;
+display: block;
 }
 
-
+/* Smooth infinite scroll */
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-50%);
+}
 }
